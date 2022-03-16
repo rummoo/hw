@@ -1,0 +1,30 @@
+	PROGRAM LIST
+	CHARACTER AD*128,SOYAD*128
+	DIMENSION NO(50),AD(50),SOYAD(50),VIZE(50),FINAL(50)
+
+
+	OPEN(UNIT=40,FILE="DUMP2.TXT")
+
+
+	WRITE(*,*)"---------------------------------------"
+	DO I=1,2
+	WRITE(*,*)I,"OGRENCI NUMARASINI GIRIN: "
+	READ(*,*)NO(I)
+	WRITE(*,*)I,"OGRENCI ADINI VE SOYADAINI GIRIN: "
+	READ(*,*)AD(I),SOYAD(I)
+	WRITE(*,*)I,"OGRENCI VIZE NOTUNU GIRIN: "
+	READ(*,*)VIZE(I)
+	WRITE(*,*)I,"OGRENCI FINAL NOTUNU GIRIN: "
+	READ(*,*)FINAL(I)
+	WRITE(*,*)"---------------------------------------"
+	
+      WRITE(40,*) NO(I),AD(I),SOYAD(I),VIZE(I),FINAL(I)
+
+
+
+
+	END DO
+
+
+
+	END PROGRAM
